@@ -1,0 +1,12 @@
+### like or we can use in ()
+select * from customer where customer_company in ('dell', 'HP', 'Walmart')
+
+### Please write a query to return female employees whose salary is higher than $70,000?
+select *from employees where salary > 70000 and gender = 'Female';
+
+### Please write a query to return employees whose job title is web developer or data scientist.
+select *from employees where job_title = 'Web Developer' or job_title = 'Data Scientist';
+
+
+### Please write a query to return all employees whose job title is not Data Scientist?
+select *from employees where not job_title = 'Data Scientist';
