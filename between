@@ -1,0 +1,16 @@
+WHERE test_expression BETWEEN low_expression AND high_expression
+
+###If we need to find the names of the employees with salary amounts between $80,000 and $90,000
+SELECT *
+FROM employees
+WHERE salary BETWEEN 80000 AND 90000;
+
+SELECT *
+FROM employees
+WHERE salary >= 80000 AND salary <= 90000;
+
+
+###you need to find the employees whose salary is not between $80,000 and $90,000.
+SELECT *
+FROM employees
+WHERE salary NOT BETWEEN 80000 AND 90000;
