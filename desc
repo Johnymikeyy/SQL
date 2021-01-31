@@ -1,1 +1,13 @@
-select first_name, last_name, salary from employees order by salary desc;
+1. Please write a query to return the salary of employees from highest to lowest. 
+Show just first name, last name and salary of the employees.
+
+### select first_name, last_name, salary from employees order by salary desc;
+
+2. Please write a query to return all records from employees table sorted by gender (display females first). 
+Next, sort the result table by first names in descending order. Note: Write a single query
+
+### select * from employees order by gender asc, first_name desc;
+
+3. Which employee has been working in the company for the longest period?
+
+### select *from employees order by hire_date limit 1; 
