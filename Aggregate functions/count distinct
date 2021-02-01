@@ -1,0 +1,10 @@
+for unique cases
+
+Count(Distinct column_name)
+
+###
+select count(distinct AlbumId) from tracks
+
+### How many composer are there ?
+
+select count (distinct coposer) from  tracks

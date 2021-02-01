@@ -1,0 +1,16 @@
+count the numbers of records:
+
+select Count(first_name) from Student_info;
+
+---* character for all records --Count(*)
+
+
+####
+--SELECT count(*) from tracks --3503 records
+
+SELECT count(composer) from tracks --2525 record, almost 1000 records areNULL in composer Column
+
+
+#### How many invoices?
+
+SELECT count(*) from invoices 

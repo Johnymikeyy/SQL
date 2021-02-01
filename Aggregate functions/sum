@@ -1,0 +1,14 @@
+###total amount salary of the employees
+
+select sum(salary) as total_salary from employees
+
+###how much money did our store earn?
+
+select sum(total) from invoices
+
+
+
+
+
+############ unique
+SELECT strftime('&Y', InvoiceDate) from invoices 

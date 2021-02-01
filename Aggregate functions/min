@@ -1,0 +1,5 @@
+### who is the earlieast hired in the company?
+select min(hire_date) as earlieast_date from employees
+
+### which track have min duration?
+SELECT name, min(Milliseconds) from tracks

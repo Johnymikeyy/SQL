@@ -1,0 +1,2 @@
+### which track have min duration?
+SELECT name, min(Milliseconds) from tracks
