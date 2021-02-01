@@ -14,3 +14,19 @@ WHERE salary >= 80000 AND salary <= 90000;
 SELECT *
 FROM employees
 WHERE salary NOT BETWEEN 80000 AND 90000;
+
+
+### we try to find employees who have joined the company from June 1, 2018 to March 31, 2019. We also want to sort by hire date in ascending order.
+SELECT * FROM employees
+WHERE hire_date BETWEEN '2018-06-01' AND '2019-03-31'
+ORDER BY hire_date;
+
+
+###Please write a query to return employees whose salary is between $75,000 and $95,000?
+select *from employees where salary between 75000 and 95000;
+
+###Please write a query to return employees whose salary is not between $75,000 and $95,000. Sort it by salary in descending order.
+select *from employees where salary not between 75000 and 95000 order by salary desc;
+
+###Please write a query to return employees who have joined the company from January 1, 2018 to December 31, 2018. Sort it by hire date in ascending order.
+select *from employees where hire_date between '2018-01-01' and '2018-12-31' order by hire_date asc;
