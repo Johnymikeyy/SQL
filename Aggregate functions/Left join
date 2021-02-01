@@ -1,0 +1,5 @@
+### find the artists' album info 
+
+SELECT ar.Name as ArtistName, al.Title as AlbumTitle
+FROM artists ar
+LEFT JOIN albums al on ar.ArtistId=al.ArtistId

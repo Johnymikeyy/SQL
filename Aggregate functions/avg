@@ -1,0 +1,7 @@
+average
+
+### having duration bigger than the average duration:
+
+select avg(milliseconds) from tracks
+
+select * from tracks where Milliseconds> 393599.212103911

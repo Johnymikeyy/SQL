@@ -1,0 +1,6 @@
+### find the total amount of invoice for each Country. result Country_name total amount.
+
+SELECT BillingCountry, Sum(Total) as totalamount
+from invoices
+GROUP by BillingCountry
+order by totalamount DESC

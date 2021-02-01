@@ -1,0 +1,33 @@
+
+
+select column_name, function
+from table_name
+group by
+
+select gender, count(gender)
+from employees
+group by gender;
+
+### number of employees working as a data scientist group by gender?
+select gender, count(job_title)
+from employees
+
+
+
+### find the total number of each  composer's track. result name of the composer and number
+
+SELECT composer, count(*) from tracks
+where Composer is NOT NULL
+group by Composer
+
+## how many customers do we have from each countr?
+
+select Country, count(*)
+from customers
+group by Country
+
+or
+
+select Country, City, count(*) as NumberofCustomers
+from customers
+group by Country, City

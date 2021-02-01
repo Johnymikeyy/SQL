@@ -1,0 +1,6 @@
+### min duration of track for each album. result album id min duration.
+
+SELECT AlbumId, min(milliseconds) as duration
+from tracks
+group by AlbumId
+order by duration desc;
