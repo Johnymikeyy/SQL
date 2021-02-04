@@ -1,0 +1,31 @@
+###salary bigger than Rodney
+
+SELECT first name, last name, salary
+from employees
+where salary > 87000
+(SELECT salary
+from employees
+where first_name = "Rodney");
+
+
+####
+retrieve track id, track name, AlbumId info of the album Title " faceless"
+
+SELECT TrackId, 
+	   name as Trackname,
+	   AlbumId 
+FROM tracks
+where AlbumId = (SELECT AlbumId
+				from albums
+				where AlbumId = 1000
+				order by AlbumId DESC)
+
+###
+retrieve track id, track name, AlbumId info of the album Title "faceless"
+
+SELECT TrackId,
+		name as Trackname,
+		al.Title as AlbumTitle
+from tracks tr
+inner join albums al on tr.AlbumId = al.AlbumId
+where al.Title='Faceless'
