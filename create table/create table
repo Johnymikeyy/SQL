@@ -1,0 +1,34 @@
+###create table
+
+create table vacation_plan (
+place_id, INT,
+country TEXT, --varchar(50)
+hotel_name, TEXT,
+employee_id INT, 
+vacation_length INT, 
+budget decimal --25.25
+)
+
+which tables we need to touch?
+
+######
+
+
+SELECT tr.Name as Trackname,
+	   al.Title as AlbumTitle,
+	   al.Title as AlbumTitle,
+	   ar.Name as Artistname,
+	   inv.BillingCountry,
+	   sum(Quantity) as TotalQuantity
+from tracks tr
+INNER JOIN albums al on tr.AlbumId=tr.AlbumId
+INNER JOIN artists ar on ar.ArtistId=al.ArtistId
+inner join invoice_items ii on ii.TrackId=tr.TrackId
+inner join invoices inv on inv.InvoiceId=ii.InvoiceId
+where inv.BillingCountry='Germany' 
+--group by tr.TrackId, tr.Name, al.Title, inv.BillingCountry
+group by ar.Name
+order by tr.TrackId
+
+
+######
