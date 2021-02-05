@@ -1,0 +1,29 @@
+SELECT *
+FROM student_info
+WHERE county LIKE 'Wo%';
+                like '%on'
+                like 's_n'
+                like '__te'
+                like 's%a'  # starts with s and finish with a *
+                like '_s%'  # the second char is s *
+                like '%a&'  # anywhere has a *
+
+
+###
+
+field is Data Science or Data Analysis. Your query should return the first name, last name and field of each student and should be ordered by the first name in descending order.
+
+select first_name, last_name, field from student_info where field like 'Data%' order by first_name desc;
+
+###
+
+the last names including'er' letters.
+
+select last_name from student_info where last_name like '%er%'
+
+###
+
+to match 'r' letter in"Eric" in the first name column. Just return the first name column.
+
+èpéou
+select first_name from student_info where first_name like '_ric%'

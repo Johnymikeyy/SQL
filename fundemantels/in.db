@@ -1,0 +1,31 @@
+SELECT *
+FROM employees
+WHERE job_title = 'Data Scientist'
+OR
+job_title = 'Business Analyst';
+
+
+###
+
+SELECT *
+FROM employees
+WHERE job_title IN ('Data Scientist', 'Business Analyst');
+
+### 
+not in
+
+SELECT *
+FROM employees
+WHERE job_title
+NOT IN ('Operations Director', 'HR Manager', 'Sales Manager');
+
+
+######
+The project team will be composed of students from the fields of Data Analysis, Data Science and DevOps. You are searching for the right candidates. 
+
+select * from student_info where field in ('Data Analysis', 'Data Science', 'DevOps')
+
+######
+all possible candidates from Virginia state
+
+select * from student_info where field in ('Data Analysis', 'Data Science', 'DevOps') and state = 'Virginia'
