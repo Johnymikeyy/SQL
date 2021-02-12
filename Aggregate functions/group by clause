@@ -1,8 +1,9 @@
 
-
+#####
 select column_name, function
 from table_name
 group by
+#####
 
 select gender, count(gender)
 from employees
@@ -20,7 +21,7 @@ SELECT composer, count(*) from tracks
 where Composer is NOT NULL
 group by Composer
 
-## how many customers do we have from each countr?
+## how many customers do we have from each country?
 
 select Country, count(*)
 from customers
