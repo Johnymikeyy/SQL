@@ -7,8 +7,24 @@ select sum(salary) as total_salary from employees
 select sum(total) from invoices
 
 
-
-
-
 ############ unique
 SELECT strftime('&Y', InvoiceDate) from invoices 
+
+###################################################################
+
+SELECT SUM(salary) AS total_salary
+FROM employees
+WHERE gender = 'Female'
+
+######
+Please write a query to return the total grade as 'total_grade'.
+
+select sum(grade) as total_grade
+from student_table
+
+######
+Please write a query to return the total grade in Mathematics lesson as 'total_grade'.
+
+select sum(grade) as total_grade
+from student_table
+where lesson = "Mathematics"

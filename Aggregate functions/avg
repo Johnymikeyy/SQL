@@ -5,3 +5,28 @@ average
 select avg(milliseconds) from tracks
 
 select * from tracks where Milliseconds> 393599.212103911
+
+##################################################################
+
+SELECT AVG(salary) AS average_salary
+FROM employees
+WHERE gender = 'Male';
+
+#####
+select sum(salary), count(salary) count_salary,
+     sum(salary) / count(salary) average_salary
+     avg(salary)
+from employees
+
+######
+Please write a query to return the average grade as 'average_grade'.
+
+select avg(grade) as average_grade
+from student_table
+
+#####
+Please write a query to return the average grade in Physics lesson as 'average_grade'.
+
+select avg(grade) as average_grade
+from student_table
+where lesson = "Physics"
