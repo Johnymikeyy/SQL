@@ -4,3 +4,25 @@ SELECT BillingCountry, Sum(Total) as totalamount
 from invoices
 GROUP by BillingCountry
 order by totalamount DESC
+
+####################################################
+
+SELECT gender,
+SUM(salary) AS total_salary
+FROM employees
+GROUP BY gender
+ORDER BY total_salary DESC;
+
+gender      total_salary
+----------  ------------
+Male        522000      
+Female      314000
+
+
+##################################
+
+Please write a query to return the total salary of each department. The result table's column headers will be dept_name and total_salary.
+
+select dept_name, sum(salary) as total_salary
+from department
+group by dept_name

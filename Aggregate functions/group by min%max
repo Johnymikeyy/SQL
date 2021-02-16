@@ -4,3 +4,33 @@ SELECT AlbumId, min(milliseconds) as duration
 from tracks
 group by AlbumId
 order by duration desc;
+
+###########################################################
+
+SELECT gender, COUNT(gender)
+FROM employees
+GROUP BY gender;
+
+gender      COUNT(gender)
+----------  -------------
+Female      4            
+Male        6
+
+##########
+SELECT gender,
+MAX(salary) AS max_salary
+FROM employees
+GROUP BY gender
+ORDER BY max_salary DESC;
+
+gender      max_salary
+----------  ----------
+Male        110000    
+Female      95000
+
+
+####################
+
+select job, avg(salary), min(salary), max(salary), count(salary)
+from employees
+group by job
