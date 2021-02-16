@@ -12,5 +12,34 @@ SELECT count(composer) from tracks --2525 record, almost 1000 records areNULL in
 
 
 #### How many invoices?
-
 SELECT count(*) from invoices 
+
+
+######################################
+
+SELECT COUNT(*) AS count_of_students
+FROM student_info
+WHERE state = 'Virginia';
+
+###
+Please write a query to return the number of students as "number_of_students" from West Virginia State.
+
+select count(student_id) as number_of_students
+from student_info
+where state = "West Virginia"
+
+###
+Please write a query to return the number of female students as "number_of_students" from Virginia State.
+
+select count(gender) as number_of_students
+from student_info
+where gender = "F" and state = "Virginia"
+
+###
+Please write a query to return distinct number of job titles as "number_of_titles" in the company.
+
+select count(distinct job_title) as number_of_titles
+from employees
+
+
+
