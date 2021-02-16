@@ -1,2 +1,21 @@
 ### which track have min duration?
 SELECT name, min(Milliseconds) from tracks
+
+#######
+
+select max(salary)
+from employees
+where job = "data scientist"
+
+#########
+Please write a query to return the newest start date as 'newest_date' among the male students.
+
+select max(start_date) as newest_date
+from student_info
+where gender = "M"
+
+#### the same with different coding
+SELECT start_date FROM student_info
+WHERE gender = 'M'
+ORDER BY start_date DESC
+LIMIT 1;

@@ -3,3 +3,22 @@ select min(hire_date) as earlieast_date from employees
 
 ### which track have min duration?
 SELECT name, min(Milliseconds) from tracks
+
+#########
+
+write a query to return the earliest start date as 'earliest_date"' among the female students.
+
+select min(start_date) as earliest_date
+from student_info
+where gender = "F"
+
+### the same with different coding
+select start_date
+from student_info
+where gender = "F" limit 1
+
+
+SELECT start_date FROM student_info
+WHERE gender = 'F'
+ORDER BY start_date
+LIMIT 1;
