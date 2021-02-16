@@ -1,0 +1,63 @@
+select columns
+from table_A
+inner join table_B on join_conditions
+
+
+
+######
+
+SELECT tracks.name as TrackName, genres.Name as GenreName
+from tracks
+INNER JOIN genres on tracks.GenreId=genres.GenreId
+
+#### find the customer name of each invoice
+result invoice id customer name
+
+
+###################################################################
+SELECT
+    employees.emp_id,
+    employees.first_name,
+    employees.last_name,
+    departments.dept_name,
+    departments.dept_id
+  FROM employees
+  INNER JOIN departments
+    ON employees.emp_id = departments.emp_id;
+
+emp_id  first_name  last_name	dept_name   dept_id
+------  ----------  ---------   ----------  -------
+17679   Robert      Gilmore     Operations  13        
+26650   Elvis       Ritter      Marketing   14        
+30840   David       Barrow      Operations  13        
+51821   Linda       Foster      Operations  13        
+67323   Lisa        Wiener      Marketing   14        
+76589   Jason       Christian   Operations  13        
+97927   Billie      Lanning     Technology  12
+
+#######
+Please write a query to return the departments of the employees who have a salary higher than 80000. Show just first name, last name, salary and department of the employees.
+
+SELECT
+    employees.first_name,
+    employees.last_name,
+    employees.salary,
+    departments.dept_name  
+  FROM employees
+  INNER JOIN departments
+    ON employees.emp_id = departments.emp_id
+    WHERE employees.salary>80000;
+
+########
+Please write a query to return the departments of female employees. Show just first name, last name, salary and department of the employees.
+
+SELECT
+    employees.first_name,
+    employees.last_name,
+    employees.salary,
+    departments.dept_name  
+  FROM employees
+  INNER JOIN departments
+    ON employees.emp_id = departments.emp_id
+    WHERE gender="Female";
+
