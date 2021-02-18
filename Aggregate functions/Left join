@@ -3,3 +3,18 @@
 SELECT ar.Name as ArtistName, al.Title as AlbumTitle
 FROM artists ar
 LEFT JOIN albums al on ar.ArtistId=al.ArtistId
+
+###########################################
+
+left outer join includes all the datas on the left side even if they are "null"
+
+#############
+
+Using the Left JOIN method, write a query to return the departments of all male employees in the "employees" table. Show just first name, last name, department and department ID of the employees.
+
+select first_name, last_name, dept_name, dept_id
+from employees
+left join departments
+on departments.emp_id = employees.emp_id
+where employees.gender = "Male"
+

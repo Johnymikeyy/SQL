@@ -61,3 +61,6 @@ SELECT
     ON employees.emp_id = departments.emp_id
     WHERE gender="Female";
 
+
+!!!!!!!!!!!!!!!
+inner join does not include null ones while left outer join includes
