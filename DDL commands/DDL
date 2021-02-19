@@ -1,0 +1,19 @@
+***DDL - Data Definition Language
+
+Data Definition Language (DDL) specifies the database schema. The statements used in DDL are CREATE, ALTER, DROP. DDL statements are typically used to set up and configure a new database before we insert data.
+
+***DML - Data Manipulation Language
+
+Data Manipulation Language (DML) enables users to access or manipulate data. INSERT, UPDATE, DELETE, SELECT are the statements used in DML.
+
+
+***DCL - Data Control Language
+
+ Data Control Language (DCL) is used to grant or revoke access control. Its statements are REVOKE and GRANT.
+
+
+***TCL - Transaction Control Language
+
+Transaction Control Language (TCL) controls the transactions of DML and DDL commands. Its statements are BEGIN and COMMIT.
+
+
