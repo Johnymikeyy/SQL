@@ -1,0 +1,21 @@
+A subquery must be enclosed in parentheses.
+An ORDER BY clause is not allowed to use in a subquery.
+The BETWEEN operator can't be used with a subquery. 
+But you can use BETWEEN within the subquery.
+
+
+#######
+the employees who get paid more than Rodney Weaver. Our query should return first name, last name, and salary info of the employees.
+
+SELECT first_name, last_name, salary
+FROM employees
+WHERE salary > 
+    (SELECT salary 
+     FROM employees
+     WHERE first_name = "Rodney");
+
+first_name  last_name   salary    
+----------  ----------  ----------
+Robert      Gilmore     110000    
+Linda       Foster      95000     
+Jason       Christian   99000

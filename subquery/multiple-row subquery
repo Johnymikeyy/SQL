@@ -1,0 +1,40 @@
+Multiple-row subqueries return sets of rows and are used with multiple-row operators such as IN, NOT IN, ANY, ALL.
+
+##########
+find the employees (first name, last name from employees table) who work under the Operations department (departments table).
+
+SELECT first_name, last_name
+FROM employees
+WHERE emp_id IN
+   (SELECT emp_id 
+    FROM departments
+    WHERE dept_name = 'Operations');
+
+
+first_name  last_name 
+----------  ----------
+Robert      Gilmore   
+David       Barrow    
+Linda       Foster    
+Jason       Christian
+
+
+#######
+Find employees (first name, last name) who work under the Marketing department.
+
+select first_name, last_name
+from employees
+where emp_id in (select emp_id
+                    from departments
+                    where dept_name = "Marketing")
+
+
+
+#######
+
+How many male employees work under the Operations department?
+
+SELECT COUNT(gender) AS count_male
+FROM employees
+WHERE gender = 'Male' AND emp_id IN (SELECT emp_id FROM departments
+WHERE dept_name = 'Operations');

@@ -29,3 +29,21 @@ SELECT TrackId,
 from tracks tr
 inner join albums al on tr.AlbumId = al.AlbumId
 where al.Title='Faceless'
+
+####################################################
+let' s find out the employees who get paid more than the average salary. Our query should return first name, last name, and salary info of the employees. 
+
+SELECT first_name, last_name, salary
+FROM employees
+WHERE salary > 
+    (SELECT AVG(salary) 
+     FROM employees);
+
+first_name  last_name   salary    
+----------  ----------  ----------
+Robert      Gilmore     110000    
+Elvis       Ritter      86000     
+David       Barrow      85000     
+Linda       Foster      95000     
+Rodney      Weaver      87000     
+Jason       Christian   99000
