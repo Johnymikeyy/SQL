@@ -1,0 +1,16 @@
+We can define the constraints with the CREATE TABLE statement or ALTER TABLE statement.
+
+CREATE TABLE table_name (
+   column1 DATATYPE CONSTRAINT,
+   column1 DATATYPE CONSTRAINT,
+   ...
+);
+
+
+Constraints
+Constraint Name	Definition
+NOT NULL	Ensures that a column cannot have a NULL value
+DEFAULT	Sets a default value for a column when no value is specified
+UNIQUE	Ensures that all values in a column are different
+PRIMARY KEY	Uniquely identifies each row in a table
+FOREIGN KEY	Uniquely identifies a row/record in another table

@@ -1,0 +1,28 @@
+Foreign key is a column in a table that uniquely identifies each row of another table. That column refers to a primary key of another table. This creates a kind of link between the tables. 
+
+CREATE TABLE customers (customer_id INT PRIMARY KEY,
+first_name TEXT,
+second_name TEXT);
+
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    order_number INT,
+    customer_id INT,
+    FOREIGN KEY (customer_id)
+     REFERENCES customers (customer_id)
+);
+
+
+
+INSERT INTO customers (customer_id, first_name, last_name)
+VALUES (1, 'Robert', 'Cursor'),
+       (2, 'Julia', 'Loyds'),
+       (3, 'Jack', 'Morgten');
+
+
+INSERT INTO orders (order_id, order_number, customer_id)
+VALUES (1, 101, 3),
+       (2, 102, 3),
+       (3, 103, 2),
+       (4, 104, 1);

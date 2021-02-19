@@ -1,0 +1,26 @@
+A table can have only one primary key. The primary key can consist of one or multiple columns. We define the PRIMARY KEY in the CREATE TABLE statement.
+
+CREATE TABLE table_name(
+  column_1 INT PRIMARY KEY,
+  column_2 TEXT,
+  ...
+);
+
+
+CREATE TABLE table_name(
+  column_1 INT,
+  column_2 TEXT,
+  ...
+  PRIMARY KEY (column_1)
+);
+
+
+
+CREATE TABLE employees(
+emp_id INT NOT NULL PRIMARY KEY,
+first_name TEXT,
+last_name TEXT,
+salary INT,
+job_title TEXT,
+gender TEXT,
+hire_date TEXT);

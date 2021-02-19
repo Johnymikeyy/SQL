@@ -1,0 +1,16 @@
+a table named teachers to our students database. Each teacher has the following information:
+Name
+Lesson
+Salary
+
+
+CREATE TABLE teachers (
+  name TEXT,
+  lesson TEXT,
+  salary INT
+);
+
+
+.table   shows tables
+
+student_table teachers
