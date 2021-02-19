@@ -1,0 +1,43 @@
+n SQLite, there are five primitive data types. They are called storage classes. Here are the details of them:
+NULL: The value is a NULL value. NULL values mean missing information or unknown.
+INTEGER: The value is a whole number (positive or negative), stored in 1, 2, 3, 4, 6 or 8 bytes depending on the magnitude of the value.
+REAL: The value is a floating-point value, stored as an 8-byte float. They are real numbers with decimal values.
+TEXT: The value is a text string, stored using the database encoding (UTF-8, UTF-16BE or UTF-16LE).
+BLOB: BLOB stands for a binary large object that can store any kind of data. The value is a blob of data, stored exactly as it was input.
+
+
+
+SQLite determines the data type of a value based on its data type in accordance with the following rules:
+If a value is enclosed by single or double quotes, it is assigned the TEXT storage class.
+If a value has no enclosing quotes and decimal point or exponent, it is assigned INTEGER storage class.
+If a value has no enclosing quotes, but decimal point or exponent, it is assigned REAL storage class.
+If a value is NULL without quotes, it is assigned NULL storage class.
+If a value has X'ABCD' or x'abcd', it is assigned BLOB storage class.
+
+
+
+SELECT typeof(emp_id),
+typeof(first_name),
+typeof(hire_date)
+FROM employees
+LIMIT 1;
+
+typeof(emp_id)  typeof(first_name)  typeof(hire_date)
+--------------  ------------------  -----------------
+integer         text                text
+
+
+
+####
+
+SELECT
+    typeof('100'),
+    typeof(100),
+    typeof(10.0),
+    typeof(x'1000'),
+    typeof(NULL);
+
+
+typeof('100')  typeof(100)  typeof(10.0)  typeof(x'1000')  typeof(NULL)
+-------------  -----------  ------------  ---------------  ------------
+text           integer      real          blob             null
